@@ -46,10 +46,10 @@ box-logica-js/
 1. Instale o Node.js (se ainda não tiver).
 2. Clone este repositório:
    ```bash
-   git clone https://github.com/SEU-USER/box-logica-js.git
+   git clone https://github.com/joaoemanuels/minisystem.git
 3. Acesse a pasta e execute qualquer arquivo:
-  cd box-logica-js
-  node caixa-eletronico.js
+  ```cd box-logica-js
+  ```node nomedoprojeto.js
 4. Veja os resultados direto no console.
 
 
