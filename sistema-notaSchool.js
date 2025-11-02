@@ -1,23 +1,22 @@
 const calcNota = (...nota) => {
-  let peso = [3, 2, 3, 2];
-  let somaNotas = [];
+  let peso = [3, 2, 2, 2];
+  let somaPesos = 0;
   let bonusParticipacao = 2;
   let bonus = true;
   let media = 0;
 
   for (let i in nota) {
-    let soma = { nota: nota[i], peso: peso[i] };
+    somaPesos += peso[i];
     media += nota[i] * peso[i];
-    somaNotas.push(soma);
   }
-  let mediaFinal = media / nota.length;
+  let mediaFinal = media / somaPesos;
 
   if (bonus) {
     mediaFinal += bonusParticipacao;
   } else {
     console.log("Sem bonus de participação");
   }
-  console.log(`A media final é ${Math.round(mediaFinal / nota.length)}`);
+  console.log(`A media final é ${Math.round(mediaFinal)}`);
 };
 
 calcNota(7, 7, 7, 7);
