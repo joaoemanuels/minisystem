@@ -17,4 +17,4 @@ const simuladorInvestimento = (valor, taxaJuros = 0.1, meses = 12) => {
   );
 };
 
-simuladorInvestimento(1518);
+simuladorInvestimento(1352000);

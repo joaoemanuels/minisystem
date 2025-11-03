@@ -25,4 +25,4 @@ const simularSaque = (valorSaque, saldo) => {
     ${qtdNotas[3]} notas de R$5`);
 };
 
-simularSaque(315, 1000);
+simularSaque(175, 1000);

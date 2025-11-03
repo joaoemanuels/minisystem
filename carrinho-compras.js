@@ -32,4 +32,4 @@ const carrinhoCompras = (...produtos) => {
   }
 };
 
-carrinhoCompras("camisa", "calça", "sapato");
+carrinhoCompras("camisa", "sapato");

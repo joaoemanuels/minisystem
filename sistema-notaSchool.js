@@ -2,7 +2,7 @@ const calcNota = (...nota) => {
   let peso = [3, 2, 2, 2];
   let somaPesos = 0;
   let bonusParticipacao = 2;
-  let bonus = true;
+  let bonus = false;
   let media = 0;
 
   for (let i in nota) {
@@ -19,4 +19,4 @@ const calcNota = (...nota) => {
   console.log(`A media final é ${Math.round(mediaFinal)}`);
 };
 
-calcNota(7, 7, 7, 7);
+calcNota(9, 3, 7.5, 6);
