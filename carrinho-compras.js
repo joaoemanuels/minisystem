@@ -33,3 +33,37 @@ const carrinhoCompras = (...produtos) => {
 };
 
 carrinhoCompras("camisa", "sapato");
+
+
+//--------------------- versão otimizada
+/*
+const carrinhoCompras = (...produtos) => {
+  const catalogo = [
+    { nome: "camisa", preco: 10 },
+    { nome: "calça", preco: 20 },
+    { nome: "sapato", preco: 30 },
+    { nome: "meia", preco: 10 },
+    { nome: "bota", preco: 20 },
+  ];
+
+  const clientVip = false;
+  const desconto = 0.15;
+
+  // Filtra os produtos escolhidos
+  const carrinho = catalogo.filter((item) => produtos.includes(item.nome));
+
+  // Mostra cada item e calcula o total
+  let valorTotal = 0;
+  carrinho.forEach((item) => {
+    console.log(`${item.nome} - R$${item.preco}`);
+    valorTotal += item.preco;
+  });
+
+  // Aplica desconto se VIP
+  const valorFinal = clientVip ? valorTotal * (1 - desconto) : valorTotal;
+  const msgDesconto = clientVip ? ` com desconto de ${desconto * 100}%` : "";
+  console.log(`O valor final${msgDesconto} é R$${valorFinal.toFixed(2)}`);
+};
+
+carrinhoCompras("camisa", "sapato");
+*/

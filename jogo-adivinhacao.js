@@ -20,3 +20,31 @@ const jogoAdivinhacao = (...numero) => {
   console.log(`O numero correto era o ${numAleatorio}`);
 };
 jogoAdivinhacao(10, 20, 30, 40);
+
+
+
+//--------------------- versão otimizada
+/*
+const jogoAdivinhacao = (numeros, max = 50) => {
+  const numAleatorio = Math.floor(Math.random() * max) + 1;
+  
+  for (let i = 0; i < numeros.length; i++) {
+    const numeroEscolhido = numeros[i];
+
+    if (numeroEscolhido === numAleatorio) {
+      console.log(`Parabéns, acertou! O número era ${numAleatorio}`);
+      return;
+    }
+
+    const dica = numeroEscolhido > numAleatorio ? 'maior' : 'menor';
+    console.log(`Quase! O número correto é ${dica} que ${numeroEscolhido}`);
+
+    if (i === numeros.length - 1) {
+      console.log(`Você usou todas as tentativas. O número correto era ${numAleatorio}`);
+    }
+  }
+};
+
+jogoAdivinhacao([10, 20, 30, 40]);
+
+*/
